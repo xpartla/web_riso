@@ -1,0 +1,6 @@
+@include('components.header')
+@include('components.nav')
+@include('articles.intro')
+@include('articles.filter')
+@include('articles.list')
+@include('components.footer')
