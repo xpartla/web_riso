@@ -7,6 +7,7 @@ use \App\Http\Controllers\ServicesController;
 use \App\Http\Controllers\AboutController;
 use \App\Http\Controllers\ArticlesController;
 use \App\Http\Controllers\ContactController;
+use \App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::resource('/services', ServicesController::class);
 Route::resource('/about', AboutController::class);
 Route::resource('/articles', ArticlesController::class);
 Route::resource('/contact', ContactController::class);
+Route::resource('/admin', ContactController::class);
 
 Route::get('/', [IndexController::class, 'index']) ->name('index.index');
 Route::get('/quiz', [QuizController::class, 'index']) ->name('quiz.index');
@@ -31,6 +33,8 @@ Route::get('/services', [ServicesController::class, 'index']) ->name('services.i
 Route::get('/about', [AboutController::class, 'index']) ->name('about.index');
 Route::get('/articles', [ArticlesController::class, 'index']) ->name('articles.index');
 Route::get('/contact', [ContactController::class, 'index']) ->name('contact.index');
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/admin', [AdminController::class, 'index']) ->name('admin.index');
+
+
+Route::post('/admin/store', [AdminController::class, 'store'])->name('admin.store');
+
