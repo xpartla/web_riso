@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.to(link, {
                 duration: 0.3,
                 scale: 1,
-                color: 'var(--main-color)',
+                color: 'var(--secondary-color)',
                 ease: 'power2.out'
             });
             link.classList.remove('hovered');

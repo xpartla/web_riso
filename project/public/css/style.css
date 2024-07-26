@@ -26,7 +26,7 @@ body {
 /* NAVBAR */
 .navbar {
     transition: all 0.3s ease;
-    color: var(--main-color);
+    color: var(--secondary-color);
 }
 .navbar-brand img {
     height: 40px;
@@ -44,7 +44,7 @@ body {
 /* Styles for the underline effect */
 .nav-link {
     position: relative;
-    color: var(--main-color);
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: bold;
@@ -72,7 +72,7 @@ body {
 
 /* Language dropdown */
 .nav-link.dt {
-    color: var(--main-color);
+    color: var(--secondary-color);
     cursor: pointer;
     display: inline-block;
     padding: 0.5rem 1rem;
