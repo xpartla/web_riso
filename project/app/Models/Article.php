@@ -11,7 +11,7 @@ class Article extends Model
 
     public function sections()
     {
-        return $this->belongsToMany(Sections::class);
+        return $this->hasMany(Sections::class);
     }
 
     public function categories()
