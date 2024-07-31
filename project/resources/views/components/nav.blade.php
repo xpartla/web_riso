@@ -28,6 +28,12 @@
                     <input type="checkbox" id="nightModeToggle" class="night-mode-toggle">
                     <label for="nightModeToggle" class="night-mode-label"></label>
                 </div>
+                @auth
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
+                @endauth
             </div>
         </div>
     </div>
