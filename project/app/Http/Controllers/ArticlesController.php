@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
@@ -9,9 +11,32 @@ class ArticlesController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('articles.index');
+        $query = Article::query();
+
+        if ($request->filled('search')) {
+            $query->where('name', 'like', '%' . $request->search . '%');
+        }
+
+        if ($request->filled('categories')) {
+            $query->whereHas('categories', function($q) use ($request) {
+                $q->whereIn('categories.id', $request->categories);
+            });
+        }
+
+        if ($request->filled('sort')) {
+            if ($request->sort == 'date') {
+                $query->orderBy('created_at', 'desc');
+            } elseif ($request->sort == 'recommended') {
+                $query->orderBy('articles.id', 'desc');
+            }
+        }
+
+        $articles = $query->get();
+        $categories = Category::all();
+
+        return view('articles.index', compact('articles', 'categories'));
     }
 
     /**
@@ -35,7 +60,8 @@ class ArticlesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $article = Article::with('categories', 'sections')->findOrFail($id);
+        return view('articles.show', compact('article'));
     }
 
     /**

@@ -575,6 +575,19 @@ body {
 
 /* ARTICLES PAGE */
 
+.badge-krypto{
+    background-color: var(--main-color);
+}
+.badge-maty{
+    background-color: var(--alt-main-color);
+}
+.badge-podvody{
+    background-color: var(--secondary-color);
+}
+.badge-default{
+    background-color: var(--alt-secondary-color);
+}
+
 .articles-section {
     padding: 3rem 0;
 }
@@ -642,6 +655,32 @@ body {
 
 .secondary-bg{
     background-color: var(--alt-main-color);
+}
+
+/*Articles - content*/
+.section-background{
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    border-color: var(--dark-text-color);
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.section-background:hover{
+    box-shadow: 0 0 8px rgba(142, 79, 49, 1);
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+@media (max-width: 610px) {
+    .section-background {
+        width: 80%; /* Slightly less than full width on small screens */
+    }
+}
+
+.section-title{
+    color: var(--alt-main-color);
+    font-weight: bold;
 }
 
 

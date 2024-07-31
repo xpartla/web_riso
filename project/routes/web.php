@@ -51,3 +51,7 @@ Route::delete('/admin/sections/{section}', [AdminController::class, 'deleteSecti
 //creating articles
 Route::get('/admin/articles/create', [AdminController::class, 'createArticle'])->name('admin.articles.create');
 Route::post('/admin/articles', [AdminController::class, 'store'])->name('admin.store');
+
+
+//articles
+Route::get('/articles/{article}', [ArticlesController::class, 'show'])->name('articles.show');

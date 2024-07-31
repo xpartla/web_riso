@@ -14,4 +14,14 @@ class Category extends Model
     {
         return $this->belongsToMany(Article::class, 'articles_sections');
     }
+
+    public function getClassAttribute()
+    {
+        $classes = [
+            'maty' => 'badge-maty',
+            'krypto' => 'badge-krypto',
+            'podvody' => 'badge-podvody',
+        ];
+        return $classes[$this->name] ?? 'badge-default';
+    }
 }
