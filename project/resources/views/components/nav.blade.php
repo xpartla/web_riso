@@ -8,19 +8,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav mx-auto">
-                <a class="nav-link" href="{{route('quiz.index')}}">Quiz</a>
-                <a class="nav-link" href="{{route('services.index')}}">Služby</a>
-                <a class="nav-link" href="{{route('about.index')}}">O mne</a>
-                <a class="nav-link" href="{{route('articles.index')}}">Články</a>
-                <a class="nav-link" href="{{route('contact.index')}}">Kontakt</a>
+                <a class="nav-link" href="{{route('quiz.index')}}">{{ __('Quiz') }}</a>
+                <a class="nav-link" href="{{route('services.index')}}">{{ __('Services') }}</a>
+                <a class="nav-link" href="{{route('about.index')}}">{{__('About me')}}</a>
+                <a class="nav-link" href="{{route('articles.index')}}">{{ __('Articles') }}</a>
+                <a class="nav-link" href="{{route('contact.index')}}">{{ __('Contact') }}</a>
             </div>
             <div class="d-flex align-items-center">
                 <div class="dropdown me-3">
                     <a class="nav-link dt" href="#" id="languageDropdown" role="button" aria-expanded="false">
-                        ENG <span class="arrow">▼</span>
+                        {{ __('Language') }} <span class="arrow">▼</span>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="#">SVK</a></li>
+                        @foreach (config('locales.available_locales') as $locale => $language)
+                        <li><a class="dropdown-item" href="{{ route('lang.change', $locale) }}">{{ $language }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="w-100 d-block d-lg-none"></div>
