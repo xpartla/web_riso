@@ -492,6 +492,11 @@ body {
     top: auto;
 }
 
+@media (max-width: 768px) {
+    .quiz-intro, .quiz-container, .quiz-complete {
+        width: 95%;
+    }
+}
 .quiz-intro:hover, .quiz-container:hover, .quiz-complete:hover{
     transform: scale(1.05);
 }

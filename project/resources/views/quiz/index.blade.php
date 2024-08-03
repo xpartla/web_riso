@@ -39,5 +39,20 @@
         </div>
     </section>
 </div>
+<script>
+    window.translations = {
+        question_1: @json(__('quiz.question_1')),
+        question_2: @json(__('quiz.question_2')),
+        question_3: @json(__('quiz.question_3')),
+        question_4: @json(__('quiz.question_4')),
+        question_5: @json(__('quiz.question_5')),
+        question_6: @json(__('quiz.question_6')),
+        question_7: @json(__('quiz.question_7')),
+        question_8: @json(__('quiz.question_8')),
+        question_9: @json(__('quiz.question_9')),
+        question_10: @json(__('quiz.question_10')),
+        choices: @json(__('quiz.choices'))
+    };
+</script>
 <script src="{{asset('js/quiz.js')}}"></script>
 @include('components.footer')
