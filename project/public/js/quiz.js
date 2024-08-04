@@ -11,14 +11,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const questions = [
         {
-            question: "Aké je hlavné mesto Francúzska?",
-            choices: ["Paríž", "Londýn", "Berlín", "Madrid"],
-            correct: "Paris"
+            question: window.translations.question_1,
+            choices: [window.translations.choices.a_a, window.translations.choices.a_b, window.translations.choices.a_c, window.translations.choices.a_d, ],
+            correct: window.translations.choices.a_b
         },
         {
-            question: "Kto je najväčší šéf na svete?",
-            choices: ["Adam", "Jožo", "Tóno", "Roman"],
-            correct: "Adam"
+            question: window.translations.question_2,
+            choices: [window.translations.choices.b_a, window.translations.choices.b_b],
+            correct: window.translations.choices.b_a
+        },
+        {
+            question: window.translations.question_3,
+            choices: [window.translations.choices.c_a, window.translations.choices.c_b, window.translations.choices.c_c, window.translations.choices.c_d, ],
+            correct: window.translations.choices.c_a
+        },
+        {
+            question: window.translations.question_4,
+            choices: [window.translations.choices.d_a, window.translations.choices.d_b, window.translations.choices.d_c, window.translations.choices.d_d, ],
+            correct: window.translations.choices.d_d
+        },
+        {
+            question: window.translations.question_5,
+            choices: [window.translations.choices.e_a, window.translations.choices.e_b],
+            correct: window.translations.choices.e_b
+        },
+        {
+            question: window.translations.question_6,
+            choices: [window.translations.choices.f_a, window.translations.choices.f_b, window.translations.choices.f_c, window.translations.choices.f_d, ],
+            correct: window.translations.choices.f_c
+        },
+        {
+            question: window.translations.question_7,
+            choices: [window.translations.choices.g_a, window.translations.choices.g_b, window.translations.choices.g_c, window.translations.choices.g_d, ],
+            correct: window.translations.choices.g_d
+        },
+        {
+            question: window.translations.question_8,
+            choices: [window.translations.choices.h_a, window.translations.choices.h_b, window.translations.choices.h_c, window.translations.choices.h_d, ],
+            correct: window.translations.choices.h_c
+        },
+        {
+            question: window.translations.question_9,
+            choices: [window.translations.choices.i_a, window.translations.choices.i_b, window.translations.choices.i_c, window.translations.choices.i_d, ],
+            correct: window.translations.choices.i_a
+        },
+        {
+            question: window.translations.question_10,
+            choices: [window.translations.choices.j_a, window.translations.choices.j_b, window.translations.choices.j_c, window.translations.choices.j_d, ],
+            correct: window.translations.choices.j_b
         },
     ];
 
@@ -30,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             questionContainer.innerHTML = '';
             const questionObj = questions[currentQuestionIndex];
-            const questionElement = document.createElement('h2');
+            const questionElement = document.createElement('h5');
             questionElement.textContent = questionObj.question;
             questionContainer.appendChild(questionElement);
 
@@ -52,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             questionContainer.style.opacity = '1';
         }, 300);
-        nextQuestionBtn.style.display = 'block';
+        nextQuestionBtn.style.display = 'inline-block';
     }
 
     function updateProgress() {
@@ -90,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateProgress();
         } else {
             quizContainer.style.display = 'none';
-            finalScore.innerHTML = `You scored ${score} out of ${questions.length}`;
+            finalScore.innerHTML = window.translations.score.replace('${score}', score).replace('${questions.length}', questions.length);
             quizComplete.style.display = 'block';
         }
     });

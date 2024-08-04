@@ -5,8 +5,8 @@
 
         <div class="cta-section mt-5">
             <h3>Ready to Transform Your Business?</h3>
-            <p>Don't wait any longer. Click the button below to schedule a meeting and start your journey towards success.</p>
-            <button class="cta-button">Set Up a Meeting</button>
+            <p>{{__("If you are interested in my services, book a non-binding consultation from the available dates, where we can discuss what you need.")}}</p>
+            <button class="cta-button">{{__("Set up a meeting")}}</button>
         </div>
     </div>
 </section>

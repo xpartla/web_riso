@@ -7,32 +7,59 @@
                 <div class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/owner.png') }}" alt="Icon 1"></div>
                     <div class="content">
-                        <h4>Small Business Owners</h4>
-                        <p>Looking to scale their business through innovative strategies.</p>
+                        <h4>{{__('University students')}}</h4>
+                        <p>{{__('Who think about the future and know they have to help themselves.')}}</p>
                     </div>
                 </div>
                 <div class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/entrepreneur.png') }}" alt="Icon 2"></div>
                     <div class="content">
-                        <h4>Entrepreneurs</h4>
-                        <p>Seeking tailored solutions to bring their ideas to life.</p>
+                        <h4>{{__('Young families')}}</h4>
+                        <p>{{__('Who want to organize their finances, check contracts, and set up effective work with them.')}}</p>
                     </div>
                 </div>
                 <div class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/enterprise.png') }}" alt="Icon 3"></div>
                     <div class="content">
-                        <h4>Established Companies</h4>
-                        <p>Aiming to improve efficiency and reduce costs.</p>
+                        <h4>{{__('Young people')}}</h4>
+                        <p>{{__('Who started working after school and would like to develop good financial habits.')}}</p>
                     </div>
                 </div>
                 <div class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/owner.png') }}" alt="Icon 1"></div>
                     <div class="content">
-                        <h4>Small Business Owners</h4>
-                        <p>Looking to scale their business through innovative strategies.</p>
+                        <h4>{{__('Mature and knowledgeable people')}}</h4>
+                        <p>{{__("Who have their finances under control but don't have as much time to follow rapidly changing trends and regularly reflect on the financial market.")}}</p>
                     </div>
                 </div>
-                <!-- Add more cards as needed -->
+                <div class="customer-card">
+                    <div class="icon"><img src="{{ asset('img/icons/owner.png') }}" alt="Icon 1"></div>
+                    <div class="content">
+                        <h4>{{__('Foreigners')}}</h4>
+                        <p>{{__('Who want to stay in Slovakia and would like help with managing their finances.')}}</p>
+                    </div>
+                </div>
+                <div class="customer-card">
+                    <div class="icon"><img src="{{ asset('img/icons/owner.png') }}" alt="Icon 1"></div>
+                    <div class="content">
+                        <h4>{{__('Freelancers and entrepreneurs')}}</h4>
+                        <p>{{__("Who know the state won't take care of them and want to have a well-planned and prepared future, or want to appreciate their hard-earned financial assets.")}}</p>
+                    </div>
+                </div>
+                <div class="customer-card">
+                    <div class="icon"><img src="{{ asset('img/icons/owner.png') }}" alt="Icon 1"></div>
+                    <div class="content">
+                        <h4>{{__('Employees')}}</h4>
+                        <p>{{__("Who, like freelancers and entrepreneurs, want to appreciate their hard-earned financial assets or feel the need to plan and set up finances.")}}</p>
+                    </div>
+                </div>
+                <div class="customer-card">
+                    <div class="icon"><img src="{{ asset('img/icons/owner.png') }}" alt="Icon 1"></div>
+                    <div class="content">
+                        <h4>{{__('Companies')}}</h4>
+                        <p>{{__('Small, medium, or large, who want to offer their employees benefits in the form of education, a 3rd pillar, their own pension fund, and other options provided by the financial market.')}}</p>
+                    </div>
+                </div>
             </div>
             <button class="scroll-arrow right-arrow" aria-label="Scroll right"><i class="fas fa-chevron-right"></i></button>
         </div>
