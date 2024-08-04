@@ -49,4 +49,5 @@ return[
       'j_c' => 'Príjmy z investícií',
       'j_d' => 'Úspory v banke'
     ],
+    'score' => 'Vaše skóre je ${score} z ${questions.length}'
 ];

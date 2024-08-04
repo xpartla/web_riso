@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateProgress();
         } else {
             quizContainer.style.display = 'none';
-            finalScore.innerHTML = `You scored ${score} out of ${questions.length}`;
+            finalScore.innerHTML = window.translations.score.replace('${score}', score).replace('${questions.length}', questions.length);
             quizComplete.style.display = 'block';
         }
     });

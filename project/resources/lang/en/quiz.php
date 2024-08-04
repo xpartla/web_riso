@@ -49,4 +49,5 @@ return[
         'j_c' => 'Income from investments',
         'j_d' => 'Savings in the bank'
     ],
+    'score' => 'You scored ${score} out of ${questions.length}'
 ];

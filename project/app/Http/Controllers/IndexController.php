@@ -11,7 +11,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('index.index');
+        $words = __('rotating_words.words');
+        return view('index.index', compact('words'));
     }
 
     /**
