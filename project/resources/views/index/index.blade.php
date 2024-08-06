@@ -1,6 +1,7 @@
 @include('components.header')
 @include('components.nav')
 @include('index.main')
+@include('index.help')
 @include('index.calculator')
 @include('index.customers')
 @include('index.benefits')

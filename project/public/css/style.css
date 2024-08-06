@@ -358,7 +358,17 @@ body {
     overflow: hidden;
     scroll-behavior: smooth;
     flex: 1;
-    padding: 0 3rem; /* Adjust padding to ensure arrows are outside the content */
+    padding: 0 3rem;
+    list-style-type: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+
+.customer-cards-wrapper::-webkit-scrollbar{
+    display: none;
 }
 
 .customer-card {
@@ -370,6 +380,8 @@ body {
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
+    width: 80%;
+    scroll-snap-align: center;
 }
 
 .customer-card:hover {
@@ -391,6 +403,100 @@ body {
     color: var(--dark-text-color);
 }
 
+
+/*How can I help you cards*/
+
+#help-you {
+    padding: 3rem 0;
+}
+
+#help-you h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--alt-main-color);
+}
+
+.help-cards-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.help-cards-wrapper {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 0 3rem;
+    list-style-type: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 50%;
+    @media (max-width: 768px) {
+        height: 80%;
+    }
+}
+
+.help-cards-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.help-card {
+    flex: 0 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 1rem;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 40%;
+    scroll-snap-align: center;
+    @media (max-width: 1200px) {
+        width: 60%;
+    }
+    @media (max-width: 768px) {
+        width: 80%;
+    }
+}
+
+.help-card:hover {
+    transform: scale(1.05);
+}
+
+.help-card .icon img {
+    width: 50px;
+    height: 50px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.help-card h4 {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+.help-card ul{
+    padding-left: 1rem;
+    list-style-position: inside;
+}
+.help-card .content li {
+    color: var(--alt-main-color);
+    text-indent: 0;
+    list-style: disc;
+    font-size: 20px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+    @media (max-width: 420px) {
+        font-size: 14px;
+    }
+}
+
+
+
 .scroll-arrow {
     background: transparent;
     border: none;
@@ -401,6 +507,7 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
 }
 
 .scroll-arrow:hover {
@@ -409,10 +516,16 @@ body {
 
 .scroll-arrow.left-arrow {
     left: -2rem; /* Position the left arrow outside the content */
+    @media (max-width: 599px) {
+        margin-left: 1.5rem;
+    }
 }
 
 .scroll-arrow.right-arrow {
     right: -2rem; /* Position the right arrow outside the content */
+    @media (max-width: 599px) {
+        margin-right: 1.5rem;
+    }
 }
 
 #benefits {

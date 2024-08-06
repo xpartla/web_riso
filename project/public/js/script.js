@@ -298,29 +298,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     };
 
-    //CUSTOMER CARDS
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-    const customerCardsWrapper = document.querySelector('.customer-cards-wrapper');
-
-    const scrollAmount = 300; // Adjust this value based on the desired scroll distance
-
-    leftArrow.addEventListener('click', () => {
-        customerCardsWrapper.scrollBy({
-            top: 0,
-            left: -scrollAmount,
-            behavior: 'smooth'
-        });
-    });
-
-    rightArrow.addEventListener('click', () => {
-        customerCardsWrapper.scrollBy({
-            top: 0,
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
-    });
-
     // GSAP animations for hover effects
     const customerCards = document.querySelectorAll('.customer-card');
 
@@ -445,8 +422,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-
-
-
 });
+
+const list = document.querySelector(".customer-cards-wrapper");
+const item = document.querySelector(".customer-card");
+const itemWidth = item.offsetWidth;
+
+function handleClick(direction) {
+    var dist = itemWidth
+    if(direction === "previous") {
+        list.scrollBy({ left: -dist, behavior: "smooth" });
+    } else {
+        list.scrollBy({ left: dist, behavior: "smooth" });
+    }
+}
+
+const helpList = document.querySelector(".help-cards-wrapper");
+const helpItem = document.querySelector(".help-card");
+const helpItemWidth = helpItem.offsetWidth;
+function handleHelpClick(direction) {
+    var dist = helpItemWidth
+    if(direction === "previous") {
+        helpList.scrollBy({ left: -dist, behavior: "smooth" });
+    } else {
+        helpList.scrollBy({ left: dist, behavior: "smooth" });
+    }
+}
