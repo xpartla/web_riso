@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Articles List</h2>
+    <h2>{{__("Articles List")}}</h2>
     <div class="row" id="articlesList">
         @foreach($articles as $article)
             <div class="col-md-6 mb-4">
@@ -15,10 +15,10 @@
                             @if($article->sections->isNotEmpty())
                                 {{ Str::limit($article->sections->first()->content, 100) }}
                             @else
-                                No content available.
+                            {{__("No content available.")}}
                             @endif
                         </p>
-                        <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">Read More</a>
+                        <a href="{{ route('articles.show', $article->id) }}" class="btn btn-primary">{{__("Read More")}}</a>
                     </div>
                 </div>
             </div>
