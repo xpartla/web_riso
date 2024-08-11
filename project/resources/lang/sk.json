@@ -105,5 +105,13 @@
     "Message": "Správa",
     "Send Message": "Odoslať správu",
     "Book a Consultation": "Dohodnúť konzultáciu",
-    "Phone" : "Telefón"
+    "Phone" : "Telefón",
+    "years" : "rokov",
+    "Enter investment amount" : "Zadajte výšku investície",
+    "Time" : "Čas",
+    "Future Value ($)": "Hodnota (€)",
+    "Pessimistic" : "Pesimistická",
+    "Realistic" : "Realistická",
+    "Optimistic" : "Optimistická",
+    "Based on your selected goal of :goal, with a :time year timeline, :cost cost, and :strategy strategy, the estimated outcomes are displayed in the graph above." : "Vzhľadom na to že Váš vybraný cieľ je :goal, s investičným horizontom :time rokov, výškou vkladu :cost €, s tým že Vaša stratégia je  :strategy , vyššie v grafe môžete vidieť očakávaný predpoklad vývoja Vašej investície."
 }

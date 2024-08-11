@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // Smooth scroll to the calculator
     const calculatorBtn = document.querySelector('.cta-container .btn-secondary');
     calculatorBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -197,8 +196,70 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    //CALCULATOR FOR NOW
     let resultsChart;
+
+    var slider = document.getElementById("time");
+    var output = document.getElementById("outputValue");
+    output.innerHTML = slider.value;
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+
+    window.calculate = function() {
+        const goal = document.getElementById('goal').value;
+        const time = parseInt(document.getElementById('time').value, 10);
+        const cost = parseFloat(document.getElementById('cost').value);
+        const strategy = document.getElementById('strategy').value;
+
+        const translations = window.translations;
+
+        let rates;
+        switch(strategy) {
+            case 'conservative':
+                rates = { pessimistic: 0, realistic: 0.02, optimistic: 0.04 };
+                break;
+            case 'balanced':
+                rates = { pessimistic: 0.02, realistic: 0.05, optimistic: 0.07 };
+                break;
+            case 'aggressive':
+                rates = { pessimistic: 0.05, realistic: 0.075, optimistic: 0.10 };
+                break;
+        }
+
+        let intervals, labels;
+        if (time < 3) {
+            intervals = time * 12 / 3; // 3-month intervals
+            labels = Array.from({length: intervals}, (v, i) => `${i * 3 + 3} mes.`);
+        } else {
+            intervals = time;
+            labels = Array.from({length: time}, (v, i) => new Date().getFullYear() + i);
+        }
+
+        const futureValues = {
+            pessimistic: calculateFutureValue(cost, rates.pessimistic, intervals, time),
+            realistic: calculateFutureValue(cost, rates.realistic, intervals, time),
+            optimistic: calculateFutureValue(cost, rates.optimistic, intervals, time)
+        };
+
+        createChart(labels, futureValues.pessimistic, futureValues.realistic, futureValues.optimistic);
+
+        const feedback = translations.feedback
+            .replace(':goal', translations[goal])
+            .replace(':time', time)
+            .replace(':cost', cost)
+            .replace(':strategy', translations[strategy]);
+        document.getElementById('feedback').innerText = feedback;
+    };
+    function calculateFutureValue(principal, annualRate, intervals, years) {
+        const futureValues = [];
+        const compoundingsPerYear = intervals < years * 12 ? 12 : 1;
+        for (let i = 1; i <= intervals; i++) {
+            const timePeriod = i / compoundingsPerYear;
+            const futureValue = principal * Math.pow(1 + annualRate / compoundingsPerYear, compoundingsPerYear * timePeriod);
+            futureValues.push(futureValue.toFixed(2));
+        }
+        return futureValues;
+    }
 
     function createChart(labels, pessimistic, realistic, optimistic) {
         const ctx = document.getElementById('resultsChart').getContext('2d');
@@ -207,96 +268,60 @@ document.addEventListener('DOMContentLoaded', () => {
             resultsChart.destroy();
         }
 
-        resultsChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: labels, // Use dynamically generated labels
-                datasets: [
-                    {
-                        label: 'Pessimistic',
-                        data: pessimistic,
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        fill: false
-                    },
-                    {
-                        label: 'Realistic',
-                        data: realistic,
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        fill: false
-                    },
-                    {
-                        label: 'Optimistic',
-                        data: optimistic,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        fill: false
-                    }
-                ]
-            },
-            options: {
-                animation: {
-                    duration: 1250, // 2 seconds
-                    easing: 'easeInOutQuint'
+        const translations = window.translations;
+
+        setTimeout(() => {
+            resultsChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: translations.pessimistic,
+                            data: pessimistic,
+                            borderColor: 'rgba(204, 204, 204, 1)',
+                            fill: false
+                        },
+                        {
+                            label: translations.realistic,
+                            data: realistic,
+                            borderColor: 'rgba(188, 108, 37, 1)',
+                            backgroundColor: 'rgba(188, 108, 37, 0.2)',
+                            fill: true
+                        },
+                        {
+                            label: translations.optimistic,
+                            data: optimistic,
+                            borderColor: 'rgba(96, 108, 56, 1)',
+                            fill: false
+                        }
+                    ]
                 },
-                scales: {
-                    x: {
-                        title: {
-                            display: true,
-                            text: 'Years'
+                options: {
+                    scales: {
+                        y: {
+                            title: {
+                                display: true,
+                                text: translations.future_value
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: translations.time
+                            }
                         }
                     },
-                    y: {
-                        beginAtZero: true,
-                        title: {
-                            display: true,
-                            text: 'Outcome'
+                    elements: {
+                        line: {
+                            tension: 0.3
                         }
                     }
-                },
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top'
-                    },
-                    tooltip: {
-                        mode: 'index',
-                        intersect: false
-                    }
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
                 }
-            }
-        });
+            });
+        }, 0);
     }
 
-    window.calculate = function() {
-        const goal = document.getElementById('goal').value;
-        const time = parseInt(document.getElementById('time').value, 10);
-        const cost = document.getElementById('cost').value;
-        const periodicity = document.getElementById('periodicity').value;
-        const strategy = document.getElementById('strategy').value;
-
-        // Generate years based on selected time range
-        const startYear = new Date().getFullYear();
-        const years = Array.from({length: time}, (v, i) => startYear + i);
-
-        // Mock calculation logic (replace with actual logic)
-        const pessimistic = years.map(() => Math.random() * 100);
-        const realistic = years.map(() => Math.random() * 100 + 50);
-        const optimistic = years.map(() => Math.random() * 100 + 100);
-
-        // Create or update the chart
-        createChart(years, pessimistic, realistic, optimistic);
-
-        // Feedback text based on selection (customize as needed)
-        const feedback = `Based on your selected goal of ${goal}, with a ${time} year timeline, ${cost} cost, and ${strategy} strategy, the estimated outcomes are displayed in the graph above.`;
-        document.getElementById('feedback').innerText = feedback;
-
-    };
 
     // GSAP animations for hover effects
     const customerCards = document.querySelectorAll('.customer-card');
