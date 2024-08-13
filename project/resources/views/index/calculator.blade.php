@@ -44,6 +44,7 @@
                         </select>
                     </div>
                     <button type="button" class="btn btn-primary calculator-button" onclick="calculate()">{{__( "Calculate")}}</button>
+                    <p class="light-text">{{__("Calculations in the calculator are based on the current performance of funds, which does not guarantee the same performance in the future. Therefore, these calculations are for informational purposes only.")}}</p>
                 </form>
             </div>
             <div class="col-lg-6">

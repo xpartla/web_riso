@@ -27,6 +27,13 @@ body {
     background-color: var(--bg-color);
 }
 
+.icon-big {
+    transform: scale(150%);
+    }
+.icon-big-wrapper{
+    padding-top: 1rem;
+}
+
 /* NAVBAR */
 .navbar {
     transition: all 0.3s ease;
@@ -232,6 +239,12 @@ body {
 }
 
 /* Calculator Section */
+
+.light-text{
+    font-style: italic;
+    font-weight: lighter;
+    padding-top: 0.5rem;
+}
 
 .slider{
     accent-color: var(--secondary-color);
@@ -828,7 +841,7 @@ body {
     position: absolute;
     width: 50px;
     height: 2px;
-    background-color: var(--alt-main-color);
+    /*background-color: var(--alt-main-color);*/
     top: 50%;
     transform: translateY(-50%);
 }
@@ -1191,4 +1204,19 @@ body {
 
 .social{
     text-decoration: none;
+}
+
+.footer-name{
+    margin-left: 1rem;
+}
+
+.footer i {
+    color: var(--secondary-color);
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+.footer i:hover {
+    color: var(--dark-text-color);
+    transition: color 0.3s ease;
 }

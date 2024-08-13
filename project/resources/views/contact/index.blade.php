@@ -47,7 +47,7 @@
         <div class="row align-items-start mt-5">
             <div class="col-lg-6">
                 <h2>{{__("Book a Consultation")}}</h2>
-                <p>Aenean diam ipsum, pellentesque nec malesuada nec, volutpat nec risus. Maecenas ac urna nulla. Aenean porta volutpat leo, eu fringilla risus lacinia eget. Pellentesque ullamcorper quam felis, a accumsan mi convallis non. Sed eu turpis tortor. In vel semper lacus. Ut eget faucibus orci, id dignissim risus.</p>
+                <p>{{__("If you are interested in my services, please schedule a non-binding consultation from the available slots, where we can discuss what you might need.")}}</p>
             </div>
             <div class="col-lg-6">
                 <div class="calendly-inline-widget" data-url="https://calendly.com/your-link" style="min-width:320px;height:630px;"></div>

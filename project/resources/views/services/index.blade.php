@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{asset('img/general/service.jpg')}}" alt="Finance Administration" class="img-fluid">
+                <img src="{{asset('img/general/management.png')}}" alt="Finance Administration" class="img-fluid" style="transform: scale(75%)">
             </div>
         </div>
 
@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{asset('img/general/service.jpg')}}" alt="Investment Advice" class="img-fluid">
+                <img src="{{asset('img/general/audit.png')}}" alt="Investment Advice" class="img-fluid" style="transform: scale(75%)">
             </div>
         </div>
 
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{asset('img/general/service.jpg')}}" alt="Financial Audit" class="img-fluid">
+                <img src="{{asset('img/general/advice.png')}}" alt="Financial Audit" class="img-fluid" style="transform: scale(75%)">
             </div>
         </div>
 

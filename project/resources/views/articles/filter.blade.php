@@ -30,7 +30,7 @@
                 <button type="submit" class="btn btn-secondary w-100" id="filterBtn">{{__("Filter")}}</button>
             </div>
             <div class="col-md-6">
-                <p class="lead">{{__("Discover a range of insightful articles on various financial topics including investment strategies, savings plans, and retirement preparation. Our articles are designed to provide you with the knowledge you need to make informed financial decisions.")}}</p>
+                <p class="lead">{{__("Welcome to the articles section, where you will find everything about the world of finance and financial services. The goal is to provide current and useful information that can help you make decisions about your finances. Whether you are interested in investments, savings, insurance, or retirement planning, the articles are designed to inform and inspire you.")}}</p>
             </div>
         </div>
     </form>
