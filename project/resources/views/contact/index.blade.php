@@ -50,8 +50,11 @@
                 <p>{{__("If you are interested in my services, please schedule a non-binding consultation from the available slots, where we can discuss what you might need.")}}</p>
             </div>
             <div class="col-lg-6">
-                <div class="calendly-inline-widget" data-url="https://calendly.com/your-link" style="min-width:320px;height:630px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                <!-- Calendly inline widget begin -->
+                <h1 id="calendly"></h1>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/partl-adam43" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
             </div>
         </div>
     </div>

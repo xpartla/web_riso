@@ -25,11 +25,11 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="w-100 d-block d-lg-none"></div>
-                <div class="toggle-switch mt-2 mt-lg-0">
-                    <input type="checkbox" id="nightModeToggle" class="night-mode-toggle">
-                    <label for="nightModeToggle" class="night-mode-label"></label>
-                </div>
+{{--                <div class="w-100 d-block d-lg-none"></div>--}}
+{{--                <div class="toggle-switch mt-2 mt-lg-0">--}}
+{{--                    <input type="checkbox" id="nightModeToggle" class="night-mode-toggle">--}}
+{{--                    <label for="nightModeToggle" class="night-mode-label"></label>--}}
+{{--                </div>--}}
                 @auth
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf

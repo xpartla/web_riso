@@ -1220,3 +1220,12 @@ body {
     color: var(--dark-text-color);
     transition: color 0.3s ease;
 }
+
+.pl{
+    font-weight: bold;
+    color: var(--secondary-color) !important;
+}
+.pl-dis{
+    font-weight: bold;
+    color: var(--dark-text-color) !important;
+}

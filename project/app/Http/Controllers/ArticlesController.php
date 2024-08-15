@@ -33,7 +33,7 @@ class ArticlesController extends Controller
             }
         }
 
-        $articles = $query->get();
+        $articles = $query->paginate(10);
         $categories = Category::all();
 
         return view('articles.index', compact('articles', 'categories'));
