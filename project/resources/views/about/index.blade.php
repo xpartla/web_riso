@@ -30,22 +30,18 @@
         <div class="row mt-5">
             <div class="col-12">
                 <div class="services-section">
-                    <h2>{{__("FAQ")}}</h2>
+                    <h2 id="faq">{{__("FAQ")}}</h2>
                 </div>
                 <div class="faq-section">
-                    <div class="faq-item">
-                        <div class="faq-question">Question 1 <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">Answer to question 1.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Question 2 <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">Answer to question 2.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">Question 3 <i class="fas fa-chevron-down"></i></div>
-                        <div class="faq-answer">Answer to question 3.</div>
-                    </div>
+{{--otazky su v controlleri                    --}}
+                    @foreach($faqs[app()->getLocale()] as $faq)
+                        <div class="faq-item">
+                            <div class="faq-question">{{ $faq['question'] }} <i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer">{{ $faq['answer'] }}</div>
+                        </div>
+                    @endforeach
                 </div>
+
             </div>
         </div>
     </div>

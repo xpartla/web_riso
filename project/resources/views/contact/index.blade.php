@@ -51,8 +51,7 @@
             </div>
             <div class="col-lg-6">
                 <!-- Calendly inline widget begin -->
-                <h1 id="calendly"></h1>
-                <div class="calendly-inline-widget" data-url="https://calendly.com/partl-adam43" style="min-width:320px;height:700px;"></div>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/richard-masaryk-towerfinance?hide_gdpr_banner=1&background_color=f7f9fb&text_color=606c38&primary_color=283618" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 <!-- Calendly inline widget end -->
             </div>

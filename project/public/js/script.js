@@ -60,18 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Toggle night mode
-    nightModeToggle.addEventListener('change', () => {
-        gsap.to(body, {
-            duration: 0.5,
-            backgroundColor: nightModeToggle.checked ? '#2c2c2c' : '#fff',
-            color: nightModeToggle.checked ? '#f0f0f0' : '#000',
-            onComplete: () => {
-                body.classList.toggle('night-mode', nightModeToggle.checked);
-            }
-        });
-    });
-
     // Modern text rotation
     class TxtRotate {
         constructor(el, toRotate, period) {
@@ -339,46 +327,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // CTA button click event
     const ctaButton = document.querySelector('.cta-button');
     ctaButton.addEventListener('click', () => {
-        window.location.href = '#'; // Replace with your actual meeting setup link
+        window.location.href = 'https://calendly.com/richard-masaryk-towerfinance'; // Replace with your actual meeting setup link
     });
 
     // GSAP animations for the benefits section
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from('#benefits', {
-        opacity: 0,
-        duration: 1,
-        y: 50,
-        scrollTrigger: {
-            trigger: '#benefits',
-            start: 'top 80%',
-            toggleActions: 'play none none none'
-        }
-    });
-
-    gsap.from('#benefits h2', {
-        opacity: 0,
-        duration: 1,
-        y: -30,
-        delay: 0.2,
-        scrollTrigger: {
-            trigger: '#benefits',
-            start: 'top 80%',
-            toggleActions: 'play none none none'
-        }
-    });
-
-    gsap.from('#benefits p', {
-        opacity: 0,
-        duration: 1,
-        y: 30,
-        delay: 0.4,
-        scrollTrigger: {
-            trigger: '#benefits',
-            start: 'top 80%',
-            toggleActions: 'play none none none'
-        }
-    });
 
     gsap.from('.cta-section', {
         opacity: 0,

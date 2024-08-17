@@ -12,7 +12,7 @@
                 </div>
                 <div>
                     <p class="btn-text fw-bold">{{__("Would you like an online consultation?")}}</p>
-                    <a href="#" class="btn btn-primary btn-lg mb-3">{{__("Reservation")}}</a>
+                    <a href="https://calendly.com/richard-masaryk-towerfinance" class="btn btn-primary btn-lg mb-3">{{__("Reservation")}}</a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -28,7 +28,7 @@
                 </div>
                 <div>
                     <p class="btn-text fw-bold">{{__("Do you wish to learn more about me?")}}</p>
-                    <a href="#" class="btn btn-primary btn-lg mb-3">{{__("Visit FAQ")}}</a>
+                    <a href="{{ route('about.index') }}#faq" class="btn btn-primary btn-lg mb-3">{{__("Visit FAQ")}}</a>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
@@ -44,7 +44,7 @@
                 </div>
                 <div>
                     <p class="btn-text fw-bold">{{__("Read more about this topic in our articles section")}}</p>
-                    <a href="#" class="btn btn-primary btn-lg mb-3">{{__("Articles")}}</a>
+                    <a href="{{ route('articles.index') }}" class="btn btn-primary btn-lg mb-3">{{__("Articles")}}</a>
                 </div>
             </div>
             <div class="col-lg-6">

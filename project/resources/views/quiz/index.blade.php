@@ -35,7 +35,9 @@
                 <button type="submit" class="btn btn-primary">{{__("Send")}}</button>
             </form>
             <h2 class="pt-3">{{__("Or set up an online consultation")}}</h2>
-            <button class="btn btn-primary">{{__("Reservation")}}</button>
+            <button class="btn btn-primary">{{__("Reservation")}}
+                <a href="https://calendly.com/richard-masaryk-towerfinance"></a>
+            </button>
         </div>
     </section>
 </div>
