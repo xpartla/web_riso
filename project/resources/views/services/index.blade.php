@@ -1,4 +1,10 @@
 @include('components.header')
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Richard Masaryk | Ponuka mojich služieb</title>
+<meta name="description" content="Môžete sa dozvedieť viac o službách ktoré Vám ponúkam, ako napríklad Finančná Správa, Finančný Audit, Investičné poradenstvo a nezáväzné konzultácie.">
+<meta name="robots" content="index, follow">
+@include('components.header-2')
 @include('components.nav')
 
 <section class="main-section py-5 services-section">
@@ -12,11 +18,11 @@
                 </div>
                 <div>
                     <p class="btn-text fw-bold">{{__("Would you like an online consultation?")}}</p>
-                    <a href="https://calendly.com/richard-masaryk-towerfinance" class="btn btn-primary btn-lg mb-3">{{__("Reservation")}}</a>
+                    <a href="https://calendly.com/richard-masaryk-towerfinance" class="btn btn-primary btn-lg mb-3 services-btn">{{__("Reservation")}}</a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{asset('img/general/management.png')}}" alt="Finance Administration" class="img-fluid" style="transform: scale(75%)">
+                <img src="{{asset('img/general/management.png')}}" alt="Finančná správa ikona" class="img-fluid">
             </div>
         </div>
 
@@ -28,11 +34,11 @@
                 </div>
                 <div>
                     <p class="btn-text fw-bold">{{__("Do you wish to learn more about me?")}}</p>
-                    <a href="{{ route('about.index') }}#faq" class="btn btn-primary btn-lg mb-3">{{__("Visit FAQ")}}</a>
+                    <a href="{{ route('about.index') }}#faq" class="btn btn-primary btn-lg mb-3 services-btn">{{__("Visit FAQ")}}</a>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{asset('img/general/audit.png')}}" alt="Investment Advice" class="img-fluid" style="transform: scale(75%)">
+                <img src="{{asset('img/general/audit.png')}}" alt="Finančný audit ikona" class="img-fluid">
             </div>
         </div>
 
@@ -44,11 +50,11 @@
                 </div>
                 <div>
                     <p class="btn-text fw-bold">{{__("Read more about this topic in our articles section")}}</p>
-                    <a href="{{ route('articles.index') }}" class="btn btn-primary btn-lg mb-3">{{__("Articles")}}</a>
+                    <a href="{{ route('articles.index') }}" class="btn btn-primary btn-lg mb-3 services-btn">{{__("Articles")}}</a>
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{asset('img/general/advice.png')}}" alt="Financial Audit" class="img-fluid" style="transform: scale(75%)">
+                <img src="{{asset('img/general/advice.png')}}" alt="Investičné poradenstvo ikona" class="img-fluid">
             </div>
         </div>
 
@@ -56,3 +62,25 @@
 </section>
 
 @include('components.footer')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all rows that contain both an image and a button
+        const rows = document.querySelectorAll('.services-section .row');
+
+        rows.forEach(row => {
+            const image = row.querySelector('img');
+            const button = row.querySelector('.services-btn');
+
+            if (image && button) {
+                // Add event listeners to the image
+                image.addEventListener('mouseover', () => {
+                    button.classList.add('hovered'); // Add class when hovering the image
+                });
+
+                image.addEventListener('mouseout', () => {
+                    button.classList.remove('hovered'); // Remove class when not hovering the image
+                });
+            }
+        });
+    });
+</script>

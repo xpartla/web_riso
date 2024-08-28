@@ -1,4 +1,10 @@
 @include('components.header')
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Kvíz na tému Finančná gramotnosť</title>
+<meta name="description" content="Vyskúšaje si tento Kvíz, v ktorom otestujete svoju finančnú gramotnosť. Otázky sú zamerané na hypotéku, dôchodok, sporenie, infláciu ale aj investovanie.">
+<meta name="robots" content="index, follow">
+@include('components.header-2')
 @include('components.nav')
 <!-- Main Section -->
 <div class="quiz-body">

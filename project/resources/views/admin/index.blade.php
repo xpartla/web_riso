@@ -1,4 +1,5 @@
 @include('components.header')
+@include('components.header-2')
 @include('components.nav')
 @include('admin.list')
 @include('components.footer')

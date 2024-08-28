@@ -14,7 +14,7 @@
                         <li>{{__('Early repayment of the mortgage')}}</li>
                     </ul>
                     <div class="icon">
-                        <img src="{{ asset('img/icons/mortgage.png') }}" alt="Icon 1">
+                        <img src="{{ asset('img/icons/mortgage.png') }}" alt="Ikona hypotéky">
                     </div>
                 </li>
                 <li class="help-card">
@@ -24,7 +24,7 @@
                         <li>{{__("Vehicle Insurance")}}</li>
                     </ul>
                     <div class="icon icon-big-wrapper">
-                        <img class="icon-big" src="{{ asset('img/icons/assets.png') }}" alt="Icon 1">
+                        <img class="icon-big" src="{{ asset('img/icons/assets.png') }}" alt="Ikona ochrany majetku">
                     </div>
                 </li>
                 <li class="help-card">
@@ -35,7 +35,7 @@
                         <li>{{__("Other Goals")}}</li>
                     </ul>
                     <div class="icon icon-big-wrapper">
-                        <img class="icon-big" src="{{ asset('img/icons/boost.png') }}" alt="Icon 1">
+                        <img class="icon-big" src="{{ asset('img/icons/boost.png') }}" alt="Ikona Rakety">
                     </div>
                 </li>
                 <li class="help-card">
@@ -44,13 +44,13 @@
                         <li>{{__("You are 25 years old and know that the state will not allow you to retire at 65. Therefore, you will not rely on it and will save €100 per month for 40 years. With proper investment, you will have €324,000 for retirement, which amounts to €1,100 per month.")}}</li>
                     </ul>
                     <div class="icon">
-                        <img src="{{ asset('img/icons/retirement.png') }}" alt="Icon 1">
+                        <img src="{{ asset('img/icons/retirement.png') }}" alt="Ikona pre Dôchodok">
                     </div>
                 </li>
                 <li class="help-card">
                     <h4>{{__('Last but not least, I can help you with the appreciation of financial assets to prevent them from losing value. We can also review, compare, and plan other goals you want to achieve.')}}</h4>
                     <div class="icon icon-big-wrapper">
-                        <img class="icon-big" src="{{ asset('img/icons/financial_asset.png') }}" alt="Icon 1">
+                        <img class="icon-big" src="{{ asset('img/icons/financial_asset.png') }}" alt="Ikona pre Zhodnocovanie majetku">
                     </div>
                 </li>
             </ul>

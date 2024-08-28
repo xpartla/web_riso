@@ -1,6 +1,11 @@
 @include('components.header')
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Richard Masaryk - Kontakt | Kontaktné Informácie | Stretnutie</title>
+<meta name="description" content="Prejdite si moju kontaktnú sekciu, kde nájdete rôzne informácie o mne, ako linky na sociálne siete, alebo si priamo odtiaľto dohodnite online stretnutie.">
+<meta name="robots" content="index, follow">
+@include('components.header-2')
 @include('components.nav')
-
 <section class="contact-section py-5">
     <div class="container">
         <div class="row align-items-start mb-5">

@@ -1,4 +1,10 @@
 @include('components.header')
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Richard Masaryk - Otázky a Odpovede o mne</title>
+<meta name="description" content="Zodpovedané najčastejšie otázky týkajúce sa mojich služieb, medzi ktoré patrí finančná správa alebo poradenstvo ohľadom investovania, dôchodku alebo hypotéky.">
+<meta name="robots" content="index, follow">
+@include('components.header-2')
 @include('components.nav')
 <section class="about-section py-5">
     <div class="container">
@@ -18,7 +24,7 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="image-hover-container">
-                    <img src="{{asset('img/general/test.png')}}" alt="Description Image" class="img-fluid about-img">
+                    <img src="{{asset('img/general/about.jpg')}}" alt="Portrét finančného poradcu" class="img-fluid about-img">
                     <div class="hover-content">
                         <p>{{__("I offer you a long-term partnership focused on effective planning and growing your wealth. I became interested in the capital market during my bilingual studies at a business academy, and my enthusiasm for this field continued throughout my law studies. I applied my knowledge in practice and actively grew my finances. Before becoming a private advisor, I worked in the budget and finance department and studied economics and management.")}}</p>
                         <p>{{__("In my free time, I enjoy sports and exploring the world with my fiancée. Recently, we adopted our dog, Fénix, from a shelter, and we take joy in every small progress he makes.")}}</p>

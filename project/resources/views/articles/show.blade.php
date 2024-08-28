@@ -1,4 +1,6 @@
 @include('components.header')
+<meta name="robots" content="noindex, nofollow">
+@include('components.header-2')
 @include('components.nav')
 <div class="container articles-section" id="article-view">
     <h1>{{ $article->name }}</h1>
