@@ -291,18 +291,35 @@ document.addEventListener('DOMContentLoaded', () => {
                             title: {
                                 display: true,
                                 text: translations.future_value
+                            },
+                            grid: {
+                                display: false
                             }
                         },
                         x: {
                             title: {
                                 display: true,
                                 text: translations.time
+                            },
+                            grid: {
+                                display: false
                             }
                         }
                     },
                     elements: {
                         line: {
                             tension: 0.3
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(tooltipItem) {
+                                    const value = Math.round(tooltipItem.raw);
+                                    const formattedValue = new Intl.NumberFormat('fr-FR').format(value);
+                                    return formattedValue + '€';
+                                }
+                            }
                         }
                     }
                 }

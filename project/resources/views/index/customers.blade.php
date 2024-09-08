@@ -8,56 +8,56 @@
                     <div class="icon"><img src="{{ asset('img/icons/student.png') }}" alt="Študent ikona"></div>
                     <div class="content">
                         <h4>{{__('University students')}}</h4>
-                        <p>{{__('Who think about the future and know they have to help themselves.')}}</p>
+{{--                        <p>{{__('Who think about the future and know they have to help themselves.')}}</p>--}}
                     </div>
                 </li>
                 <li class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/family.png') }}" alt="Rodina ikona"></div>
                     <div class="content">
                         <h4>{{__('Young families')}}</h4>
-                        <p>{{__('Who want to organize their finances, check contracts, and set up effective work with them.')}}</p>
+{{--                        <p>{{__('Who want to organize their finances, check contracts, and set up effective work with them.')}}</p>--}}
                     </div>
                 </li>
                 <li class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/young.png') }}" alt="Mladý ikona"></div>
                     <div class="content">
                         <h4>{{__('Young people')}}</h4>
-                        <p>{{__('Who started working after school and would like to develop good financial habits.')}}</p>
+{{--                        <p>{{__('Who started working after school and would like to develop good financial habits.')}}</p>--}}
                     </div>
                 </li>
                 <li class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/mature.png') }}" alt="Zrelí ikona"></div>
                     <div class="content">
                         <h4>{{__('Mature and knowledgeable people')}}</h4>
-                        <p>{{__("Who have their finances under control but don't have as much time to follow rapidly changing trends and regularly reflect on the financial market.")}}</p>
+{{--                        <p>{{__("Who have their finances under control but don't have as much time to follow rapidly changing trends and regularly reflect on the financial market.")}}</p>--}}
                     </div>
                 </li>
                 <li class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/foreign.png') }}" alt="Cudzinec ikona"></div>
                     <div class="content">
                         <h4>{{__('Foreigners')}}</h4>
-                        <p>{{__('Who want to stay in Slovakia and would like help with managing their finances.')}}</p>
+{{--                        <p>{{__('Who want to stay in Slovakia and would like help with managing their finances.')}}</p>--}}
                     </div>
                 </li>
                 <li class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/freelance.png') }}" alt="Freelance ikona"></div>
                     <div class="content">
                         <h4>{{__('Freelancers and entrepreneurs')}}</h4>
-                        <p>{{__("Who know the state won't take care of them and want to have a well-planned and prepared future, or want to appreciate their hard-earned financial assets.")}}</p>
+{{--                        <p>{{__("Who know the state won't take care of them and want to have a well-planned and prepared future, or want to appreciate their hard-earned financial assets.")}}</p>--}}
                     </div>
                 </li>
                 <li class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/employees.png') }}" alt="Zamestnanec ikona"></div>
                     <div class="content">
                         <h4>{{__('Employees')}}</h4>
-                        <p>{{__("Who, like freelancers and entrepreneurs, want to appreciate their hard-earned financial assets or feel the need to plan and set up finances.")}}</p>
+{{--                        <p>{{__("Who, like freelancers and entrepreneurs, want to appreciate their hard-earned financial assets or feel the need to plan and set up finances.")}}</p>--}}
                     </div>
                 </li>
                 <li class="customer-card">
                     <div class="icon"><img src="{{ asset('img/icons/company.png') }}" alt="Spoločnosť ikona"></div>
                     <div class="content">
                         <h4>{{__('Companies')}}</h4>
-                        <p>{{__('Small, medium, or large, who want to offer their employees benefits in the form of education, a 3rd pillar, their own pension fund, and other options provided by the financial market.')}}</p>
+{{--                        <p>{{__('Small, medium, or large, who want to offer their employees benefits in the form of education, a 3rd pillar, their own pension fund, and other options provided by the financial market.')}}</p>--}}
                     </div>
                 </li>
             </ul>

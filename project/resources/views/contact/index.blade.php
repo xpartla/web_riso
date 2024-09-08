@@ -12,23 +12,23 @@
             <div class="col-lg-6">
                 <div class="contact-info p-4 rounded">
                     <h1>{{__("Get in Touch")}}</h1>
-                    <p class="social-icons">
-                        <a href="https://www.instagram.com/" target="_blank" class="me-2 social">
-                            <i class="fa-brands fa-instagram fa-2xl"></i>
-                        </a>
-                        <a href="https://www.facebook.com/" target="_blank" class="me-2 social">
-                            <i class="fa-brands fa-facebook fa-2xl"></i>
-                        </a>
-                        <a href="https://twitter.com/" target="_blank" class="me-2 social">
-                            <i class="fa-brands fa-twitter fa-2xl"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="me-2 social">
-                            <i class="fa-brands fa-linkedin fa-2xl"></i>
-                        </a>
-                    </p>
+{{--                    <p class="social-icons">--}}
+{{--                        <a href="https://www.instagram.com/" target="_blank" class="me-2 social">--}}
+{{--                            <i class="fa-brands fa-instagram fa-2xl"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="https://www.facebook.com/" target="_blank" class="me-2 social">--}}
+{{--                            <i class="fa-brands fa-facebook fa-2xl"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="https://twitter.com/" target="_blank" class="me-2 social">--}}
+{{--                            <i class="fa-brands fa-twitter fa-2xl"></i>--}}
+{{--                        </a>--}}
+{{--                        <a href="https://www.linkedin.com/" target="_blank" class="me-2 social">--}}
+{{--                            <i class="fa-brands fa-linkedin fa-2xl"></i>--}}
+{{--                        </a>--}}
+{{--                    </p>--}}
                     <p class="underlined">{{__("Richard Masaryk")}}</p>
                     <p><strong>{{__("Email")}}: </strong> {{__("richard.masaryk@towerfinance.sk")}}</p>
-                    <p><strong>{{__("Phone")}}: </strong> {{__("0911 741 852")}}</p>
+                    <p><strong>{{__("Phone")}}: </strong> {{__("0902 933 200")}}</p>
                 </div>
             </div>
             <div class="col-lg-6">

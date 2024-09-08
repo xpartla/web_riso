@@ -1,4 +1,5 @@
 @include('components.header')
+@include('components.header-2')
 @include('components.nav')
 <div class="container">
     <h2>Rename Article</h2>

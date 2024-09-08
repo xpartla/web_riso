@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Richard Masaryk | Ponuka mojich služieb</title>
-<meta name="description" content="Môžete sa dozvedieť viac o službách ktoré Vám ponúkam, ako napríklad Finančná Správa, Finančný Audit, Investičné poradenstvo a nezáväzné konzultácie.">
+<meta name="description" content="Môžete sa dozvedieť viac o službách ktoré Vám ponúkam, ako napríklad Správa Financií, Finančný Audit, Investičné poradenstvo a nezáväzné konzultácie.">
 <meta name="robots" content="index, follow">
 @include('components.header-2')
 @include('components.nav')
@@ -22,7 +22,9 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{asset('img/general/management.png')}}" alt="Finančná správa ikona" class="img-fluid">
+                <a href="https://calendly.com/richard-masaryk-towerfinance">
+                    <img src="{{asset('img/general/management.png')}}" alt="Správa Financií ikona" class="img-fluid">
+                </a>
             </div>
         </div>
 
@@ -38,7 +40,9 @@
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
-                <img src="{{asset('img/general/audit.png')}}" alt="Finančný audit ikona" class="img-fluid">
+                <a href="{{ route('about.index') }}#faq">
+                    <img src="{{asset('img/general/audit.png')}}" alt="Finančný audit ikona" class="img-fluid">
+                </a>
             </div>
         </div>
 
@@ -54,7 +58,9 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="{{asset('img/general/advice.png')}}" alt="Investičné poradenstvo ikona" class="img-fluid">
+                <a href="{{ route('articles.index') }}">
+                    <img src="{{asset('img/general/advice.png')}}" alt="Investičné poradenstvo ikona" class="img-fluid">
+                </a>
             </div>
         </div>
 

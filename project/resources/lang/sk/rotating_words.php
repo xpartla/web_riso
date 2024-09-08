@@ -1,4 +1,4 @@
 <?php
 return [
-    'words' => ['vzdelania', 'vedomostí', 'skúseností']
+    'words' => ['vzdelania', 'znalostí', 'skúseností']
 ];

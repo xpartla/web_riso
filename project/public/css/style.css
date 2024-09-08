@@ -25,6 +25,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-color: var(--bg-color);
+    @media (max-width: 500px) {
+        background-image: url('../img/background/bg-no-logo.png');
+    }
 }
 
 .icon-big {
@@ -413,7 +416,7 @@ body {
     padding: 1rem;
     text-align: center;
     transition: transform 0.3s ease;
-    width: 80%;
+    width: 30%;
     scroll-snap-align: center;
 }
 
@@ -510,6 +513,9 @@ body {
     display: inline-block;
     margin-bottom: 0.5rem;
     color: var(--secondary-color);
+}
+.single{
+    padding-top: 20%;
 }
 .help-card ul{
     padding-left: 1rem;
@@ -1186,6 +1192,9 @@ body {
     transform: scale(1) translateY(115%);
     pointer-events: auto; /* Enable interaction */
     visibility: visible;
+    @media (max-width: 1920px) {
+        transform: scale(1) translateY(95%);
+    }
     @media (max-width: 1399px) {
         transform: scale(1) translateY(90%);
     }

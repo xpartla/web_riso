@@ -8,7 +8,7 @@
                 <a href="https://calendly.com/richard-masaryk-towerfinance" class="btn btn-primary">{{__('Schedule a meeting')}}</a>
                 <div class="cta-container mt-4 text-lg-end">
                     <p class="lead mb-4">{{__('Try the investment calculator to see how quickly you can achieve your goals. I will also give you a brief commentary on each calculation.')}}</p>
-                    <a href="#calculator" class="btn btn-secondary">{{__('Use the calculator')}}</a>
+                    <a rel="noopener" target="_blank" href="#calculator" class="btn btn-secondary">{{__('Use the calculator')}}</a>
                 </div>
             </div>
             <div class="col-lg-6 text-center">

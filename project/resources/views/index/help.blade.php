@@ -22,6 +22,7 @@
                     <ul class="content">
                         <li>{{__("Property Insurance")}}</li>
                         <li>{{__("Vehicle Insurance")}}</li>
+                        <li>{{__("Income Insurance")}}</li>
                     </ul>
                     <div class="icon icon-big-wrapper">
                         <img class="icon-big" src="{{ asset('img/icons/assets.png') }}" alt="Ikona ochrany majetku">
@@ -39,16 +40,13 @@
                     </div>
                 </li>
                 <li class="help-card">
-                    <h4>{{__('You won’t have to rely solely on the state pension')}}</h4>
-                    <ul class="content">
-                        <li>{{__("You are 25 years old and know that the state will not allow you to retire at 65. Therefore, you will not rely on it and will save €100 per month for 40 years. With proper investment, you will have €324,000 for retirement, which amounts to €1,100 per month.")}}</li>
-                    </ul>
+                    <h4 class="single">{{__('You won’t have to rely solely on the state pension')}}</h4>
                     <div class="icon">
                         <img src="{{ asset('img/icons/retirement.png') }}" alt="Ikona pre Dôchodok">
                     </div>
                 </li>
                 <li class="help-card">
-                    <h4>{{__('Last but not least, I can help you with the appreciation of financial assets to prevent them from losing value. We can also review, compare, and plan other goals you want to achieve.')}}</h4>
+                    <h4 class="single">{{__("Property Appreciation")}}</h4>
                     <div class="icon icon-big-wrapper">
                         <img class="icon-big" src="{{ asset('img/icons/financial_asset.png') }}" alt="Ikona pre Zhodnocovanie majetku">
                     </div>
