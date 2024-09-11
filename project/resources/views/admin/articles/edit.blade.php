@@ -38,7 +38,7 @@
                     </div>
                     <div class="form-group">
                         <label for="section_image_{{ $section->id }}">Image URL</label>
-                        <input type="url" class="form-control" id="section_image_{{ $section->id }}" name="sections[{{ $section->id }}][image]" value="{{ $section->image }}">
+                        <input type="text" class="form-control" id="section_image_{{ $section->id }}" name="sections[{{ $section->id }}][image]" value="{{ $section->image }}">
                     </div>
                     <div class="form-group">
                         <label for="section_order_{{ $section->id }}">Order</label>
@@ -65,7 +65,7 @@
         </div>
         <div class="form-group">
             <label for="new_section_image">Image URL</label>
-            <input type="url" class="form-control" id="new_section_image" name="image">
+            <input type="text" class="form-control" id="new_section_image" name="image">
         </div>
         <div class="form-group">
             <label for="new_section_order">Order</label>

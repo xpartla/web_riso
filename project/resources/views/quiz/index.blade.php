@@ -29,14 +29,14 @@
     <section class="quiz-complete py-5 text-center" style="display:none;">
         <div class="container">
             <h2 id="finalScore"></h2>
-            <form id="feedbackForm" class="mt-4">
+            <form id="feedbackForm" class="mt-4" onsubmit="sendEmail(event)">
                 <div class="mb-3">
-                    <label for="userEmail" class="form-label">{{__("Your Email")}}</label>
-                    <input type="email" class="form-control" id="userEmail">
+                    <label for="userName" class="form-label">{{__("Your Name")}}</label>
+                    <input type="text" class="form-control" id="userName" name="userName" required>
                 </div>
                 <div class="mb-3">
                     <label for="userQuestion" class="form-label">{{__("Your Question")}}</label>
-                    <textarea class="form-control" id="userQuestion" rows="3"></textarea>
+                    <textarea class="form-control" id="userQuestion" name="userQuestion" rows="3" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">{{__("Send")}}</button>
             </form>
@@ -60,6 +60,18 @@
         choices: @json(__('quiz.choices')),
         score : @json(__('quiz.score'))
     };
+    function sendEmail(event) {
+        event.preventDefault();
+
+        var name = document.getElementById('userName').value;
+        var question = document.getElementById('userQuestion').value;
+
+        var mailtoLink = 'mailto:richard@richardmasaryk.sk'
+            + '?subject=' + encodeURIComponent(name)
+            + '&body=' + encodeURIComponent(question);
+
+        window.location.href = mailtoLink;
+    }
 </script>
 <script src="{{asset('js/quiz.js')}}"></script>
 @include('components.footer')

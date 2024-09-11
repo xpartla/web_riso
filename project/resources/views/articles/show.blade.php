@@ -21,7 +21,7 @@
                     </div>
                     @if($section->image)
                         <div class="col-lg-4">
-                            <img src="{{ asset($section->image) }}" alt="{{ $section->title }}" class="img-fluid">
+                            <img src="{{ asset($section->image) }}" alt="{{ $section->title }}" class="img-fluid article-image">
                         </div>
                     @endif
                 </div>

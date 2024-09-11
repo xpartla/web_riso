@@ -29,7 +29,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('/about', AboutController::class);
     Route::resource('/articles', ArticlesController::class);
     Route::resource('/contact', ContactController::class);
-    Route::resource('/admin', ContactController::class);
+    //Route::resource('/admin', ContactController::class);
 
 //index routes
     Route::get('/', [IndexController::class, 'index']) ->name('index.index');
@@ -40,22 +40,22 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/contact', [ContactController::class, 'index']) ->name('contact.index');
 
     Route::middleware(['auth', 'admin'])->group(function (){
-    Route::get('/admin', [AdminController::class, 'index']) ->name('admin.index');
+    Route::get('/admin_314159', [AdminController::class, 'index']) ->name('admin.index');
 
 //admin routes
-    Route::get('/admin/articles/{article}/edit', [AdminController::class, 'editArticle'])->name('admin.articles.edit');
-    Route::put('/admin/articles/{article}', [AdminController::class, 'updateArticle'])->name('admin.articles.update');
-    Route::delete('/admin/articles/{article}', [AdminController::class, 'deleteArticle'])->name('admin.articles.destroy');
-    Route::get('/admin/articles/{article}/rename', [AdminController::class, 'renameArticle'])->name('admin.articles.rename');
-    Route::put('/admin/articles/{article}/rename', [AdminController::class, 'updateRenameArticle'])->name('admin.articles.updateRename');
+    Route::get('/admin_314159/articles/{article}/edit', [AdminController::class, 'editArticle'])->name('admin.articles.edit');
+    Route::put('/admin_314159/articles/{article}', [AdminController::class, 'updateArticle'])->name('admin.articles.update');
+    Route::delete('/admin_314159/articles/{article}', [AdminController::class, 'deleteArticle'])->name('admin.articles.destroy');
+    Route::get('/admin_314159/articles/{article}/rename', [AdminController::class, 'renameArticle'])->name('admin.articles.rename');
+    Route::put('/admin_314159/articles/{article}/rename', [AdminController::class, 'updateRenameArticle'])->name('admin.articles.updateRename');
 
 // Routes for sections
-    Route::post('/admin/articles/{article}/sections', [AdminController::class, 'addSection'])->name('admin.addSection');
-    Route::delete('/admin/sections/{section}', [AdminController::class, 'deleteSection'])->name('admin.deleteSection');
+    Route::post('/admin_314159/articles/{article}/sections', [AdminController::class, 'addSection'])->name('admin.addSection');
+    Route::delete('/admin_314159/sections/{section}', [AdminController::class, 'deleteSection'])->name('admin.deleteSection');
 
 //creating articles
-    Route::get('/admin/articles/create', [AdminController::class, 'createArticle'])->name('admin.articles.create');
-    Route::post('/admin/articles', [AdminController::class, 'store'])->name('admin.store');
+    Route::get('/admin_314159/articles/create', [AdminController::class, 'createArticle'])->name('admin.articles.create');
+    Route::post('/admin_314159/articles', [AdminController::class, 'store'])->name('admin.store');
 
 });
 

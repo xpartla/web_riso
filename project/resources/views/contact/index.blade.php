@@ -27,19 +27,15 @@
 {{--                        </a>--}}
 {{--                    </p>--}}
                     <p class="underlined">{{__("Richard Masaryk")}}</p>
-                    <p><strong>{{__("Email")}}: </strong> {{__("richard.masaryk@towerfinance.sk")}}</p>
+                    <p><strong>{{__("Email")}}: </strong> {{__("richard@richardmasaryk.sk")}}</p>
                     <p><strong>{{__("Phone")}}: </strong> {{__("0902 933 200")}}</p>
                 </div>
             </div>
             <div class="col-lg-6">
-                <form class="contact-form p-4 rounded">
+                <form class="contact-form p-4 rounded" onsubmit="sendMail(event)">
                     <div class="mb-3">
-                        <label for="name" class="form-label">{{__("Name")}}</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">{{__("Email")}}</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <label for="subject" class="form-label">{{__("Subject")}}</label>
+                        <input type="text" class="form-control" id="subject" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">{{__("Message")}}</label>
@@ -64,4 +60,18 @@
     </div>
 </section>
 <script src="{{asset('js/contact.js')}}"></script>
+<script>
+    function sendMail(event) {
+        event.preventDefault();
+
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+
+        var mailtoLink = 'mailto:richard@richardmasaryk.sk'
+            + '?subject=' + encodeURIComponent(subject)
+            + '&body=' + encodeURIComponent(message);
+
+        window.location.href = mailtoLink;
+    }
+</script>
 @include('components.footer')

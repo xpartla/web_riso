@@ -3,38 +3,20 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{ asset('js/script.js') }}"></script>
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3  border-top footer">
-    <div class="col-md-4 d-flex align-items-center">
-        <span class="footer-name mb-3 mb-md-0 text-body-secondary">2024 Richard Masaryk</span>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top footer">
+    <div class="col-md-6 footer-left d-flex justify-content-start">
+        <span class="footer-name mb-3 text-body-secondary">2024 Richard Masaryk</span>
     </div>
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-{{--        <li class="ms-3">--}}
-{{--            <a href="https://www.instagram.com/" target="_blank" class="me-2 social">--}}
-{{--                <i class="fa-brands fa-instagram fa-2xl"></i>--}}
-{{--            </a>--}}
-{{--        </li>--}}
-{{--        <li class="ms-3">--}}
-{{--            <a href="https://www.facebook.com/" target="_blank" class="me-2 social">--}}
-{{--                <i class="fa-brands fa-facebook fa-2xl"></i>--}}
-{{--            </a>--}}
-{{--        </li>--}}
-{{--        <li class="ms-3">--}}
-{{--            <a href="https://twitter.com/" target="_blank" class="me-2 social">--}}
-{{--                <i class="fa-brands fa-twitter fa-2xl"></i>--}}
-{{--            </a>--}}
-{{--        </li >--}}
-{{--        <li class="ms-3">--}}
-{{--            <a href="https://www.linkedin.com/" target="_blank" class="me-2 social">--}}
-{{--                <i class="fa-brands fa-linkedin fa-2xl"></i>--}}
-{{--            </a>--}}
-{{--        </li>--}}
-        <li>
-            <p class="pl">E-mail: richard.masaryk@towerfinance.sk</p>
-        </li>
-        <li class="ms-3 me-1">
-            <p class="pl">Tel: 0902 933 200</p>
-        </li>
-    </ul>
+    <div class="col-md-6 footer-right d-flex justify-content-end">
+        <p class="pl mb-3 text-body-secondary me-3">E-mail:
+            <a class="footer-a" href="mailto:richard.masaryk@towerfinance.sk">richard.masaryk@towerfinance.sk</a>
+        </p>
+        <p class="pl mb-3 text-body-secondary ml-3">Tel:
+            <a class="footer-a" href="tel:+421902933200">0902 933 200</a>
+        </p>
+    </div>
 </footer>
+
+
 </body>
 </html>

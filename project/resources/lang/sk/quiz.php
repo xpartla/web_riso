@@ -2,7 +2,7 @@
 
 return[
   'question_1'  =>'Ak uložíte 100 € na sporiaci účet s garantovanou úrokovou sadzbou 2 % ročne a na účte nebudete vykonávať žiadne ďalšie platby ani výbery a nebudete zohľadňovať dane ani poplatky, zostatok na účte na konci prvého roku po pripísaní úroku bude: ',
-  'question_2'  =>'Mesačné splátky hypotéky na 15 rokov sú vyššie ako pri hypotéke s rovnakou dlžnou sumou na 30 rokov, ale celkový úrok zaplatený počas doby trvania úveru bude menší.',
+  'question_2'  =>'Mesačná splátka hypotéky, ktorej doba splácania je 15 rokov, je vyššia ako pri hypotéke s rovnakou dlžnou sumou a rovnakou úrokov sadzbou   ktorej doba splácania je na 30 rokov, avšak celkový úrok zaplatený počas doby trvania úveru bude menší.',
   'question_3'  =>'Čo to znamená ak je vysoká inflácia?',
   'question_4'  =>'Aká je priemerná zdravá miera inflácie podľa ECB?',
   'question_5'  =>'Ktorý úver bude pre Vás ako dlžníka výhodnejší – ten, ktorý bude úročený 1 % p.m. , alebo ten, ktorý bude úročený 10 % p.a.?',
